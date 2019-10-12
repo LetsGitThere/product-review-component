@@ -13,6 +13,7 @@ class App extends React.Component {
   componentDidMount() {
     Axios.get('/reviews')
       .then((res) => {
+        console.log('test');
         console.log(res);
         this.setState({
           reviews: res.data
