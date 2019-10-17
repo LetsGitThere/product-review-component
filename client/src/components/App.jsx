@@ -1,6 +1,8 @@
 import React from 'react';
 import Axios from 'axios';
 import ReviewsList from './ReviewsList.jsx';
+import SortBar from './SortBar.jsx';
+import PageBar from './PageBar.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +15,6 @@ class App extends React.Component {
   componentDidMount() {
     Axios.get('/reviews')
       .then((res) => {
-        console.log('test');
         console.log(res);
         this.setState({
           reviews: res.data
@@ -24,8 +25,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ReviewsList reviews={this.state.reviews} />
+        <div>
+          <SortBar />
+        </div>
+        <div>
+          <ReviewsList reviews={this.state.reviews} />
+        </div>
+        <div>
+          <PageBar />
+        </div>
       </div>
+      
     )
   }
 }

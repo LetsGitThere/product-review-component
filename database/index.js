@@ -82,6 +82,13 @@ const seedDb = () => {
   }
 }
 
+const getResultsPerPage = (callback) => {
+  Review.find({})
+        .limit(5)
+        .exec(callback);
+}
+
 seedDb();
 
 module.exports = Review;
+module.exports.getResultsPerPage = getResultsPerPage;
