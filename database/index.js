@@ -54,7 +54,6 @@ const productReviewsSchema = new mongoose.Schema({
 const Review = mongoose.model('Reviews', productReviewsSchema);
 
 const seedDb = () => {
-  
   for (var i = 1; i <= 20; i++) {
     var reviewsCount = (Math.floor(Math.random() * 21) + 5);
     for (var j = 1; j <= reviewsCount; j++) {
@@ -82,13 +81,27 @@ const seedDb = () => {
   }
 }
 
-const getResultsPerPage = (callback) => {
+//gets all reviews from database when called
+const getAllReviews = (callback) => {
   Review.find({})
-        .limit(5)
+        // .limit(5)
         .exec(callback);
 }
+
+//gets reviews for database for a particular product when called
+const getReviewsByProductId = (productId, callback) => {
+  Review.find({productId: productId})
+  .exec(callback);
+}
+
+//need function to sort by stars
+
+//need function to date
+
+//need function to sort with photos
 
 seedDb();
 
 module.exports = Review;
-module.exports.getResultsPerPage = getResultsPerPage;
+module.exports.getAllReviews = getAllReviews;
+module.exports.getReviewsByProductId = getReviewsByProductId;

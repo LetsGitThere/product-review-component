@@ -1,5 +1,6 @@
 import React from 'react';
 import caret from './back.png';
+import '../styles/styles.css'
 
 const SortBar = (props) => {
   return (
