@@ -43,7 +43,7 @@ class App extends React.Component {
   componentDidMount() {
     this.getProductReviewsById();
     // this.getAllReviews();
-  }
+  } 
 
   render() {
     var lastIndex = this.state.currentPage * this.state.reviewsPerPage;

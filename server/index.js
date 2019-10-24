@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 //remove first arg to render all reviews
 //broken with first argument included
-app.use("/:productId/reviews", express.static(__dirname + '/../client/dist'));
+app.use("/:productId", express.static(__dirname + '/../client/dist'));
 
 //listens for request to url containing allReviews.json
 app.get('/api/reviews', (req, res, next) => {
