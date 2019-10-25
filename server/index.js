@@ -34,7 +34,6 @@ app.get('/api/reviews', (req, res, next) => {
 
 //listens for request to url containing specificProductReviews.json
 app.get('/api/:productId/reviews', (req, res, next) => {
-  console.log(req.params);
   Reviews.getReviewsByProductId(req.params.productId, (err, data) => {
     if (err) {
       res.send(err);

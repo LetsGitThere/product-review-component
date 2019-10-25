@@ -31,7 +31,6 @@ class App extends React.Component {
 
   getProductReviewsById() {
     var productId = window.location.pathname.split('/')[1];
-    console.log(productId);
     Axios.get(`http://localhost:4001/api/${productId}/reviews`)
       .then((res) => {
         this.setState({
