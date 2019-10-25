@@ -16,8 +16,51 @@
         font-size: 12px;
         font-weight: 100;
       }
+
+
+
+
+
+
+
+      /******************************
+      top ratings bar
+      ******************************/
+      .container-ratings {
+        z-index: 1;
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+
+      .box1-stars {
+        margin-top: 5px;
+        flex: 1;
+        border-top: 1px solid #dedede;
+        padding-right: 110px;
+      }
+
+
+      .box2-reviews {
+        margin-top: 5px;
+        flex: 1;
+        border-top: 1px solid #dedede;
+      }
+
+
+      .box3-write-reviews {
+        margin-top: 5px;
+        flex: 1;
+        border-top: 1px solid #dedede;
+      }
     
 
+
+
+
+
+      
       /******************************
       review content styling
       ******************************/

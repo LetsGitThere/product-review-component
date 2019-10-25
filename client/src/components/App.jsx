@@ -51,6 +51,20 @@ class App extends React.Component {
     // var numberOfPages = Math.floor(this.state.totalResults / 5);
     return (
         <div>
+
+          <div className="container-ratings">
+            <div className="box1-stars">
+
+            </div>
+            <div className="box2-reviews">
+
+            </div>
+            <div className="box3-write-reviews">
+
+            </div>
+
+          </div>
+
           <div>
             <SortBar />
           </div>
