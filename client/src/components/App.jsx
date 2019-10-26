@@ -6,6 +6,8 @@ import SortBar from './SortBar.jsx';
 import ReviewsList from './ReviewsList.jsx';
 import Pages from './Pages.jsx';
 
+import fourStars from '../../../images/4Stars.jpg';
+
 
 
 class App extends React.Component {
@@ -31,7 +33,8 @@ class App extends React.Component {
 
   getProductReviewsById() {
     var productId = window.location.pathname.split('/')[1];
-    Axios.get(`http://localhost:4001/api/${productId}/reviews`)
+    // Axios.get(`http://localhost:4001/api/${productId}/reviews`)
+    Axios.get(window.location.origin + `/api/${productId}/reviews`)
       .then((res) => {
         this.setState({
           reviews: res.data
@@ -52,18 +55,37 @@ class App extends React.Component {
     return (
         <div>
 
-          <div className="container-ratings">
+          {/* <div className="container-ratings">
             <div className="box1-stars">
-
+              <div>REVIEWS</div>
+              <div><img src={fourStars} width="80"/><span>(43)</span></div>
             </div>
             <div className="box2-reviews">
-
+              <div>
+                <label>5 Stars</label>
+                <progress max="100" value="70"> 70% </progress>
+              </div>
+              <div>
+                <label>4 Stars</label>
+                <progress max="100" value="70"> 70% </progress>
+              </div>
+              <div>
+                <label>3 Stars</label>
+                <progress max="100" value="70"> 70% </progress>
+              </div>
+              <div>
+                <label>2 Stars</label>
+                <progress max="100" value="70"> 70% </progress>
+              </div>
+              <div>
+                <label>1 Star</label>
+                <progress max="100" value="70"> 70% </progress>
+              </div>
             </div>
             <div className="box3-write-reviews">
-
+              Write a Review
             </div>
-
-          </div>
+          </div> */}
 
           <div>
             <SortBar />
