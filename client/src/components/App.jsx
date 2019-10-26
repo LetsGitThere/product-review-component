@@ -35,7 +35,7 @@ class App extends React.Component {
     var hostname = window.location.hostname
     var productId = window.location.pathname.split('/')[1];
     // Axios.get(`http://localhost:4001/api/${productId}/reviews`)
-    Axios.get("http://" + hostname + "/4001/api/" + productId + "/reviews")
+    Axios.get("http://" + hostname + ":4001/api/" + productId + "/reviews")
       .then((res) => {
         this.setState({
           reviews: res.data
