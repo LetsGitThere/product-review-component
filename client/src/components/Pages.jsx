@@ -20,7 +20,7 @@ const Pages = (props) => {
           pageNumbers.map((pageNumber) => {
             return (
               <li key={pageNumber} className="page-item">
-                <a href="#" >
+                <a onClick={() => props.getPage(pageNumber)} href="#" >
                   {pageNumber}
                 </a>
               </li>

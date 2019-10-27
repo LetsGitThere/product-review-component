@@ -26,6 +26,7 @@ class App extends React.Component {
     this.getProductReviewsById = this.getProductReviewsById.bind(this);
     this.sortReviewsByRating = this.sortReviewsByRating.bind(this);
     this.sortReviewsByDate = this.sortReviewsByDate.bind(this);
+    this.getPage = this.getPage.bind(this);
   }
 
   sortReviewsByRating(e) {
@@ -81,6 +82,12 @@ class App extends React.Component {
           sortByRating: res.data
         })
       })
+  }
+
+  getPage(pageNumber) {
+    this.setState({
+      currentPage: pageNumber,
+    })
   }
 
   componentDidMount() {
@@ -146,7 +153,7 @@ class App extends React.Component {
             </span>
 
             <span className="box5-btn-container">
-              <div><button className="box5-btn">Write a Review</button></div>
+              <div><button className="box5-btn" onClick={() => alert('hi :)')}>Write a Review</button></div>
             </span>
           </div>
 
@@ -159,7 +166,7 @@ class App extends React.Component {
           </div>
 
           <div className="container-pagebar">
-            <Pages reviewsPerPage={this.state.reviewsPerPage} totalReviews={this.state.reviews.length} />
+            <Pages reviewsPerPage={this.state.reviewsPerPage} totalReviews={this.state.reviews.length} getPage={this.getPage}/>
           </div>
 
         </div>

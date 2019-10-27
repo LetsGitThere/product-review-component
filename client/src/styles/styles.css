@@ -102,6 +102,12 @@
         padding-left: 65px;
         font-weight: 100;
       }
+
+      .box5-btn:hover {
+        background-color: #dedede;
+        border: none;
+        transition: 600ms;
+      }
     
       progress {
         border: none;
@@ -239,7 +245,7 @@
 
       .box1-dropdown-btn {
         font-size: 12px;
-        font-weight: 110px;
+        font-weight: 70;
         text-align: left;
         text-indent: 12px;
         margin-top: 20px;

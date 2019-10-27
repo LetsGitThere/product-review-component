@@ -10,7 +10,6 @@ class ReviewsList extends React.Component {
   render() {
     return (
       <div>
-        
         {this.props.currentReviews.map((review) => {
           return ( 
             <Review review={review} key={review._id} />
