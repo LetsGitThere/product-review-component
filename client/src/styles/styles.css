@@ -18,46 +18,117 @@
       }
 
 
-
-
-
-
-
       /******************************
       top ratings bar
       ******************************/
       .container-ratings {
+        justify-content: left;
         z-index: 1;
         display: flex;
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-
-
-      .box1-stars {
-        margin-top: 5px;
-        flex: 1;
-        border-top: 1px solid #dedede;
-        padding-right: 110px;
-      }
-
-
-      .box2-reviews {
-        margin-top: 5px;
-        flex: 1;
+        margin-left: 30px;
+        margin-right: 30px;
         border-top: 1px solid #dedede;
       }
 
+      .label {
+        font-size: 19px;
+      }
 
-      .box3-write-reviews {
+      .box1-container {
+        padding-right: 104px;
+        padding-top: 35px;
         margin-top: 5px;
-        flex: 1;
-        border-top: 1px solid #dedede;
+      }
+
+      .box1-img {
+        padding-top: 15px;
+      }
+
+      .box1-number-rating {
+        padding-left: 7px;
+        font-size: 15px;
+        position: relative;
+        bottom: 11px;
+      }
+
+      .box2-labels {
+        padding-top: 79px;
+        padding-bottom: 40px;
+        padding-right: 5px;
+        margin-top: 5px;
+        
+      }
+
+      .box3-reviews {
+        padding-top: 76px;
+        margin-top: 5px;
+        padding-right: 14px;
+      }
+      .box3-reviews span {
+        font-size: 13px;
+      }
+
+      .box2-labels div,
+      .box3-reviews div{
+        padding-bottom: 5px;
+      }
+
+      .box4-num div {
+        padding-bottom: 4px;
+      }
+
+      .box4-num div span {
+        font-size: 13px;
+        padding-bottom: 10px;
+      }
+
+      .box4-num {
+        margin-top: 5px;
+        padding-top: 79px;
+      }
+
+      .box5-btn-container {
+        padding-top: 85px;
+        padding-left: 96px;
+      }
+
+      .box5-btn {
+        font-size: 12px;
+        background: none;
+        border: 1px solid black;
+        outline: none;
+        padding: 13px;
+        padding-right: 65px;
+        padding-left: 65px;
+        font-weight: 100;
       }
     
-
-
-
+      progress {
+        border: none;
+        width: 165px;
+        height: 5px;
+        background: crimson;
+      }
+      
+      progress {
+        color: lightblue;
+      }
+      
+      progress::-webkit-progress-value {
+        background: lightblue;
+      }
+      
+      progress::-moz-progress-bar {
+        background: lightcolor;
+      }
+      
+      progress::-webkit-progress-value {
+        background: black;
+      }
+      
+      progress::-webkit-progress-bar {
+        background: #dedede;
+      }
 
 
       
@@ -150,7 +221,7 @@
         justify-content: space-around;
         flex-direction: column;
         opacity: 0;
-        pointer-events: none;
+        /* pointer-events: none; */
         transition: 0ms;
       }
 
@@ -204,7 +275,7 @@
       .box2-dropdown ul {
         height: 120px;
         opacity: 0;
-        pointer-events: none;
+        /* pointer-events: none; */
         transition: 0ms;
       }
 
