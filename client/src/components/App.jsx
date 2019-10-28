@@ -73,9 +73,10 @@ class App extends React.Component {
   }
 
   getProductReviewsById() {
-    var hostname = window.location.hostname
+    // var hostname = window.location.hostname
     var productId = window.location.pathname.split('/')[1];
-    Axios.get("http://" + hostname + ":4001/api/" + productId + "/reviews")
+    // Axios.get("http://" + hostname + ":4001/api/" + productId + "/reviews")
+    Axios.get("http://ec2-3-133-58-121.us-east-2.compute.amazonaws.com:4001/api/" + productId + "/reviews")
       .then((res) => {
         this.setState({
           reviews: res.data,
